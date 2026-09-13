@@ -107,15 +107,18 @@
     }
 
     function anterior() {
-        posicion--;
+    posicion--;
 
-        if (posicion < 0) {
-            posicion = imagenes.length - 1;
-        }
-
-        document.getElementById("imagen").src =
-            imagenes[posicion];
+    if (posicion < 0) {
+        posicion = imagenes.length - 1;
     }
+
+    document.getElementById("imagen").src =
+        imagenes[posicion];
+
+    document.getElementById("texto-imagen").textContent =
+        textos[posicion];
+}
 </script>
 
 </body>
