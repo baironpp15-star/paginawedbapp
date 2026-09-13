@@ -45,10 +45,10 @@
         <button onclick="sigiente()"></button>
     </div>
 
-    <p>
-        La bandera de Colombia representa la historia y la identidad del país.
-        Está formada por los colores amarillo, azul y rojo.
-    </p>
+    <p id="texto-imagen">
+    La bandera de Colombia representa la historia y la identidad del país.
+    Está formada por los colores amarillo, azul y rojo.
+   </p>
 
 </div>
 
@@ -82,6 +82,14 @@
 
     let posicion = 0;
 
+    let textos = [
+    "La bandera de Colombia representa la historia y la identidad del país. Está formada por los colores amarillo, azul y rojo.",
+
+    "El escudo de Colombia contiene diferentes elementos que representan la historia, la riqueza y la soberanía de nuestro país.",
+
+    "El Himno Nacional de Colombia es uno de los principales símbolos patrios y representa el sentimiento de identidad nacional."
+];
+
     function sigiente() {
         posicion++;
 
@@ -93,6 +101,9 @@
         document.getElementById("imagen").
         src =
                 imagenes[posicion];
+
+        document.getElementById("texto-imagen").textContent =
+        textos[posicion];
     }
 
     function anterior() {
