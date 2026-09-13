@@ -174,3 +174,26 @@ section p {
     font-size: 17px;
     line-height: 1.6;
 }
+.carrusel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.carrusel button{
+    background-color: aqua;
+    color: white;
+    border: none;
+    font-size: 25px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.carrusel button{
+    background-color: aqua;
+}
+.carrusel img{
+    width: 400px;
+    max-width: 300px;
+    margin: 0;
+}

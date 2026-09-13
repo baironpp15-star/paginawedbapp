@@ -39,7 +39,11 @@
 
     <h3>🇨🇴 La Bandera</h3>
 
-    <img src="bandera.jfif" alt="Bandera de Colombia">
+    <div class="carrusel"> 
+        <button onclick="anterior()"></button>
+        <img id="imagen" src="bandera.jfif" alt="sinbolos patrios">
+        <button onclick="sigiente()"></button>
+    </div>
 
     <p>
         La bandera de Colombia representa la historia y la identidad del país.
@@ -69,6 +73,39 @@
     </p>
 
 </div>
+<script>
+    let imagenes = [
+        "bandera.jfif",
+        "images.jpg",
+        "museo.jfif"
+    ];
+
+    let posicion = 0;
+
+    function sigiente() {
+        posicion++;
+
+        if (posicion >=
+         imagenes.length) {
+                 posicion = 0;
+        }
+
+        document.getElementById("imagen").
+        src =
+                imagenes[posicion];
+    }
+
+    function anterior() {
+        posicion--;
+
+        if (posicion < 0) {
+            posicion = imagenes.length - 1;
+        }
+
+        document.getElementById("imagen").src =
+            imagenes[posicion];
+    }
+</script>
 
 </body>
 
