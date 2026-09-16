@@ -1,12 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f7e8cc;
+    background-color: #cda7ffbd
+    ;
 }
 
 h1 {
     text-align: center;
-    color: #8B4513;
+    color: #faf8f7;
     font-size: 42px;
     margin-top: 40px;
     margin-bottom: 10px;
@@ -29,18 +30,18 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
     padding: 10px 15px;
-    color: #8B4513;
+    color: #f8f7f7;
     border-radius: 8px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    background-color: #8B4513;
+    background-color: #131313;
     color: white;
 }
-
+ #para los botones
 nav a.activo {
-    background-color: #8B4513;
+    background-color: #f57a7a;
     color: white;
 }
 
@@ -66,7 +67,7 @@ section {
 }
 
 header {
-    background-color: #6d3812;
+    background-color: #75d7e4;
     color: white;
     display: flex;
     align-items: center;
@@ -113,7 +114,7 @@ section p {
 }
 
 .bienvenida {
-    background-color: #fff8f0;
+    background-color: white;
     padding: 30px;
     margin: 20px auto;
     border-radius: 10px;
