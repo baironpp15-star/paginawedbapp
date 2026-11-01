@@ -1,279 +1,653 @@
+
+/* ==========================================
+   1. CONFIGURACIÓN GENERAL DE LA PÁGINA
+   ========================================== */
+
 body {
     font-family: Arial, sans-serif;
+    /* Define el tipo de letra de toda la página */
+
     margin: 0;
+    /* Elimina el margen exterior predeterminado del navegador */
+
     background-color: #61605c;
+    /* Establece el color de fondo de la página */
+
     ;
 }
 
+/* ==========================================
+   2. TÍTULO PRINCIPAL
+   ========================================== */
+
 h1 {
     text-align: center;
+    /* Centra el título */
+
     color: white;
+    /* Cambia el color del texto a blanco */
+
     font-size: 42px;
+    /* Define el tamaño de la letra */
+
     margin-top: 40px;
+    /* Agrega espacio por encima */
+
     margin-bottom: 10px;
+    /* Agrega espacio por debajo */
 }
+
+/* ==========================================
+   3. CONFIGURACIÓN GENERAL DE LAS IMÁGENES
+   ========================================== */
 
 img {
     width: 200px;
+    /* Define el ancho inicial de las imágenes */
+
     max-width: 100%;
+    /* Evita que superen el ancho de su contenedor */
+
     height: auto;
+    /* Mantiene las proporciones originales */
+
     display: block;
+    /* Hace que la imagen se comporte como un bloque */
+
     margin: 20px 0;
+    /* Agrega espacio exterior arriba y abajo */
 }
+
+/* ==========================================
+   4. MENÚ DE NAVEGACIÓN
+   ========================================== */
 
 nav {
     text-align: center;
+    /* Centra los elementos del menú */
+
     margin: 20px;
+    /* Agrega espacio exterior */
 }
 
 nav a {
     margin: 0 15px;
+    /* Separa los enlaces horizontalmente */
+
     text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+
     padding: 10px 15px;
+    /* Agrega espacio interior a los botones */
+
     color: white;
+    /* Establece el color blanco del texto */
+
     border-radius: 8px;
+    /* Redondea las esquinas de los botones */
+
     transition: 0.3s;
+    /* Hace más suave el cambio de estilos */
 }
+
+/* EFECTO CUANDO EL CURSOR PASA SOBRE UN ENLACE */
 
 nav a:hover {
     background-color: #131313;
+    /* Cambia el fondo a negro */
+
     color: white;
+    /* Mantiene el texto blanco */
 }
+
  #para los botones
+
+/* ESTILO DEL BOTÓN QUE IDENTIFICA LA PÁGINA ACTUAL */
+
 nav a.activo {
     background-color: #111111;
+    /* Coloca el fondo oscuro en el enlace activo */
+
     color: white;
+    /* Mantiene el texto blanco */
 }
+
+/* ==========================================
+   5. CONFIGURACIÓN GENERAL DE LAS SECCIONES
+   ========================================== */
 
 section {
     max-width: 900px;
+    /* Establece el ancho máximo de las secciones */
+
     margin: 10px auto;
+    /* Centra las secciones y agrega espacio exterior */
+
     padding: 0 20px;
+    /* Agrega espacio interior a los lados */
 }
 
+/* ==========================================
+   6. ADAPTACIÓN DEL MENÚ A CELULARES
+   ========================================== */
+
 @media (max-width: 600px) {
+    /* Estas reglas funcionan cuando la pantalla mide máximo 600 píxeles */
 
     nav {
         display: flex;
+        /* Utiliza el sistema flexible para organizar los enlaces */
+
         flex-wrap: wrap;
+        /* Permite que los botones pasen a otra fila */
+
         justify-content: center;
+        /* Centra los botones */
+
         gap: 10px;
+        /* Establece la separación entre ellos */
     }
 
     nav a {
         display: inline-block;
+        /* Permite controlar mejor el espacio de cada enlace */
+
         margin: 5px;
+        /* Agrega separación entre los botones */
     }
 }
 
+/* ==========================================
+   7. ENCABEZADO DEL MUSEO
+   ========================================== */
+
 header {
     background-color: #f8f8f8;
+    /* Establece el fondo del encabezado */
+
     color: rgb(12, 12, 12);
+    /* Define el color del texto */
+
     display: flex;
+    /* Organiza el emoji y el título en una fila */
+
     align-items: center;
+    /* Centra verticalmente los elementos */
+
     padding: 15px 40px;
+    /* Agrega espacio interior */
 }
 
 header span {
     font-size: 35px;
+    /* Cambia el tamaño del emoji */
+
     margin-right: 25px;
+    /* Separa el emoji del nombre del museo */
 }
 
 header h2 {
     margin: 0;
+    /* Elimina el margen predeterminado del título */
 }
+
+/* ==========================================
+   8. DECORACIÓN DEL TÍTULO PRINCIPAL
+   ========================================== */
 
 .decoracion {
     display: flex;
+    /* Organiza las líneas y el emoji en una fila */
+
     align-items: center;
+    /* Centra verticalmente los elementos */
+
     justify-content: center;
+    /* Centra la decoración horizontalmente */
+
     gap: 15px;
+    /* Separa las líneas del emoji */
+
     margin: 10px 0 35px;
+    /* Agrega espacio exterior */
 }
 
 .decoracion hr {
     width: 160px;
+    /* Define el ancho de las líneas */
+
     border: none;
+    /* Elimina el borde predeterminado */
+
     border-top: 2px solid #000000;
+    /* Crea una línea negra */
+
     margin: 0;
+    /* Elimina el margen predeterminado */
 }
 
 .decoracion span {
     font-size: 25px;
+    /* Define el tamaño del emoji decorativo */
 }
+
+/* ==========================================
+   9. TÍTULOS Y PÁRRAFOS DE LAS SECCIONES
+   ========================================== */
 
 section h2 {
     color: #0a0a0a;
+    /* Cambia el color de los subtítulos */
+
     font-size: 28px;
+    /* Establece el tamaño de los subtítulos */
+
     margin-bottom: 10px;
+    /* Agrega espacio debajo del título */
 }
 
 section p {
     font-size: 17px;
+    /* Define el tamaño de los párrafos */
+
     line-height: 1.6;
+    /* Establece la separación entre las líneas */
 }
+
+/* ==========================================
+   10. SECCIÓN DE BIENVENIDA
+   ========================================== */
 
 .bienvenida {
     background-color: white;
+    /* Coloca un fondo blanco */
+
     padding: 30px;
+    /* Agrega espacio interior */
+
     margin: 20px auto;
+    /* Centra la sección y agrega espacio exterior */
+
     border-radius: 10px;
+    /* Redondea las esquinas */
+
     max-width: 900px;
+    /* Establece el ancho máximo */
 }
 
 .imagen-bienvenida {
     width: 500px;
+    /* Establece el ancho de la imagen de bienvenida */
+
     max-width: 100%;
+    /* Evita que se salga del contenedor */
+
     height: auto;
+    /* Conserva las proporciones */
+
     border-radius: 8px;
+    /* Redondea las esquinas de la imagen */
 }
+
+/* ==========================================
+   11. LÍNEA DECORATIVA DEL MUSEO
+   ========================================== */
 
 .linea-museo {
     width: 80px;
+    /* Define el ancho de la línea */
+
     height: 4px;
+    /* Define el grosor de la línea */
+
     background-color: #b59a6a;
+    /* Establece el color dorado */
+
     margin: 10px 0 15px;
+    /* Agrega espacio alrededor */
+
     border-radius: 5px;
+    /* Redondea las esquinas */
 }
+
+/* ==========================================
+   12. IMAGEN DE LA SECCIÓN SOBRE EL MUSEO
+   ========================================== */
 
 .imagen-sobre {
     width: 500px;
+    /* Define el ancho de la imagen */
+
     max-width: 100%;
+    /* Adapta la imagen al contenedor */
+
     height: auto;
+    /* Mantiene las proporciones */
+
     border-radius: 8px;
+    /* Redondea las esquinas */
 }
+
+/* ==========================================
+   13. TARJETAS DE CONTENIDO
+   ========================================== */
 
 .tijeras {
     background-color: #fff8f0;
+    /* Coloca un fondo claro */
+
     padding: 30px;
+    /* Agrega espacio interior */
+
     margin: 20px auto;
+    /* Centra las tarjetas y agrega separación */
+
     border-radius: 10px;
+    /* Redondea las esquinas */
+
     max-width: 900px;
+    /* Limita el ancho de las tarjetas */
 }
 
-/* Tarjetas de los símbolos patrios */
+/* ==========================================
+   14. TARJETAS DE LOS SÍMBOLOS PATRIOS
+   ========================================== */
 
 .tarjeta-simbolo {
     background-color: white;
+    /* Establece el fondo blanco */
+
     padding: 25px;
+    /* Agrega espacio interior */
+
     margin: 20px auto;
+    /* Centra las tarjetas */
+
     border-radius: 12px;
+    /* Redondea las esquinas */
+
     max-width: 600px;
+    /* Establece el ancho máximo */
+
     text-align: center;
+    /* Centra el contenido */
 }
 
 .tarjeta-simbolo h3 {
     font-size: 24px;
+    /* Define el tamaño del título de la tarjeta */
+
     margin-bottom: 15px;
+    /* Agrega espacio debajo del título */
 }
 
 .tarjeta-simbolo img {
     width: 500px;
+    /* Define el ancho de las imágenes */
+
     max-width: 100%;
+    /* Evita que superen el contenedor */
+
     height: auto;
+    /* Conserva las proporciones */
+
     border-radius: 8px;
+    /* Redondea las esquinas */
+
     display: block;
+    /* Convierte la imagen en un bloque */
+
     margin: 20px auto;
+    /* Centra la imagen y agrega espacio */
 }
 
 .tarjeta-simbolo p {
     font-size: 17px;
+    /* Define el tamaño del texto */
+
     line-height: 1.6;
+    /* Separa las líneas del párrafo */
 }
+
+/* ==========================================
+   15. ESTRUCTURA DEL CARRUSEL
+   ========================================== */
+
 .carrusel {
     display: flex;
+    /* Organiza los botones y la imagen en una fila */
+
     align-items: center;
+    /* Centra verticalmente los elementos */
+
     justify-content: center;
+    /* Centra el carrusel horizontalmente */
+
     gap: 15px;
+    /* Separa los elementos */
+
     width: 100%;
+    /* Ocupa todo el ancho disponible */
+
     flex-wrap: nowrap;
+    /* Evita que los elementos pasen a otra fila */
 }
+
+/* ==========================================
+   16. DISEÑO DE LOS BOTONES DEL CARRUSEL
+   ========================================== */
 
 .carrusel button {
     flex-shrink: 0;
+    /* Evita que los botones se encojan */
+
     width: 35px;
+    /* Ancho del botón */
+
     height: 35px;
+    /* Alto del botón */
+
     background-color: #8B4513;
+    /* Fondo café */
+
     color: white;
+    /* Color blanco para la flecha */
+
     border: none;
+    /* Elimina el borde */
+
     border-radius: 50%;
+    /* Hace los botones circulares */
+
     font-size: 18px;
+    /* Tamaño de la flecha */
+
     cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+
     display: flex;
+    /* Utiliza flexbox para centrar el contenido */
+
     align-items: center;
+    /* Centra verticalmente la flecha */
+
     justify-content: center;
+    /* Centra horizontalmente la flecha */
 }
+
+/* EFECTO AL PASAR EL CURSOR SOBRE LOS BOTONES */
 
 .carrusel button:hover {
     background-color: #6d3812;
+    /* Oscurece el fondo del botón */
 }
+
+/* IMAGEN DEL CARRUSEL */
 
 .carrusel img {
     width: 400px;
+    /* Ancho de la imagen */
+
     max-width: 70%;
+    /* Limita el ancho para dejar espacio a los botones */
+
     height: auto;
+    /* Conserva las proporciones */
+
     margin: 0;
+    /* Elimina los márgenes generales */
+
     border-radius: 8px;
+    /* Redondea las esquinas */
 }
+
+/* ==========================================
+   17. ADAPTACIÓN DEL CARRUSEL A CELULARES
+   ========================================== */
+
 @media (max-width: 600px) {
+    /* Estos estilos se aplican en pantallas pequeñas */
 
     .carrusel {
         gap: 8px;
+        /* Reduce la separación entre los elementos */
     }
 
     .carrusel button {
         width: 30px;
+        /* Reduce el ancho de los botones */
+
         height: 30px;
+        /* Reduce el alto de los botones */
+
         font-size: 16px;
+        /* Reduce el tamaño de la flecha */
     }
 
     .carrusel img {
         width: 100%;
+        /* Permite que la imagen utilice el espacio disponible */
+
         max-width: 75%;
+        /* Limita su ancho para dejar espacio a los botones */
     }
 }
+
+/* ==========================================
+   18. SECCIÓN DE CONTEXTO
+   ========================================== */
+
 .contexto{
     max-width: 900px;
+    /* Establece el ancho máximo */
+
     margin: 30px auto;
+    /* Centra la sección y agrega espacio exterior */
+
     padding: 0 20px;
+    /* Agrega espacio a los lados */
 }
+
 .contexto h2 {
     color: #0a0a0a;
+    /* Color del título */
+
     font-size: 28px;
+    /* Tamaño del título */
+
     margin-bottom: 10px;
+    /* Espacio debajo del título */
 }
+
+/* LÍNEA DORADA DE CONTEXTO */
+
 .linea-contexto{
     width: 80px;
+    /* Ancho de la línea */
+
     height: 4px;
+    /* Grosor de la línea */
+
     background-color: #b59a6a;
+    /* Color dorado */
+
     border-radius: 5px;
+    /* Esquinas redondeadas */
+
     margin-bottom: 15px;
+    /* Espacio debajo de la línea */
 }
+
+/* CUADRO BLANCO DEL TEXTO DE CONTEXTO */
+
 .texto-contexto{
     background-color: white;
+    /* Fondo blanco */
+
     padding: 25px;
+    /* Espacio interior */
+
     border-radius: 10px;
+    /* Esquinas redondeadas */
 }
+
 .texto-contexto p {
     margin: 0;
+    /* Elimina el margen del párrafo */
+
     font-size: 17px;
+    /* Tamaño del texto */
+
     line-height: 1.6;
+    /* Separación entre líneas */
 }
+
+/* ==========================================
+   19. LÍNEA DORADA DE SÍMBOLOS PATRIOS
+   ========================================== */
+
 .linea-simbolos {
     display: block !important;
+    /* Hace que la línea se muestre como bloque */
+
     width: 80px !important;
+    /* Define el ancho */
+
     height: 4px !important;
+    /* Define el grosor */
+
     background-color: #b59a6a !important;
+    /* Establece el color dorado */
+
     border-radius: 5px;
+    /* Redondea las esquinas */
+
     margin: 10px 0 15px !important;
+    /* Agrega espacio alrededor */
 }
+
+/* ==========================================
+   20. CUADRO BLANCO DE SÍMBOLOS PATRIOS
+   ========================================== */
+
 .texto-simbolos{
     background-color: white;
+    /* Fondo blanco */
+
     padding: 25px;
+    /* Espacio interior */
+
     border-radius: 10px;
+    /* Redondea las esquinas */
 }
+
 .texto-simbolos p {
     margin: 0;
+    /* Elimina el margen del párrafo */
+
     font-size: 17px;
+    /* Tamaño del texto */
+
     line-height: 1.6;
+    /* Separación entre líneas */
 }

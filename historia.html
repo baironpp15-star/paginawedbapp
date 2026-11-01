@@ -1,93 +1,157 @@
+
 <!DOCTYPE html>
+<!-- Indica que el documento utiliza HTML5 -->
+
 <html lang="es">
+<!-- Establece el idioma español -->
 
 <head>
+    <!-- Configuración general de la página -->
+
     <meta charset="UTF-8">
+    <!-- Permite mostrar tildes, ñ y caracteres especiales -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adapta la página a celulares, tabletas y computadores -->
+
     <title>Historia - Museo De Historia</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
     <link rel="stylesheet" href="style.css">
+    <!-- Conecta esta página con el archivo de estilos CSS -->
+
 </head>
 
 <body>
+<!-- Aquí comienza el contenido visible de la página -->
 
+<!-- ENCABEZADO DEL MUSEO -->
 <header>
     <span>🏛️</span>
+    <!-- Emoji decorativo del museo -->
+
     <h2>Museo De Historia</h2>
+    <!-- Nombre del museo -->
 </header>
 
+<!-- MENÚ DE NAVEGACIÓN ENTRE LAS PÁGINAS -->
 <nav>
     <a href="index.html">Inicio</a>
+    <!-- Enlace a la página principal -->
+
     <a href="historia.html" class="activo">Historia</a>
+    <!-- Enlace a Historia. La clase activo identifica la página actual -->
+
     <a href="exposiciones.html">Exposiciones</a>
+    <!-- Enlace a Exposiciones -->
+
     <a href="horarios.html">Horarios</a>
+    <!-- Enlace a Horarios -->
+
     <a href="contactos.html">Contactos</a>
+    <!-- Enlace a Contactos -->
 </nav>
 
+<!-- TÍTULO PRINCIPAL DE LA PÁGINA -->
 <h1>Conoce Sobre Colombia</h1>
 
+<!-- SECCIÓN QUE PRESENTA EL CONTEXTO DE COLOMBIA -->
 <section class="contexto">
 
 <h2>Contexto</h2>
+<!-- Título de la sección -->
 
 <div class="linea-contexto"></div>
+<!-- Línea decorativa debajo del título -->
 
 <div class="texto-contexto">
+<!-- Contenedor que agrupa el texto del contexto -->
 
 <p>
     Colombia es un país ubicado en América del Sur, conocido por su rica cultura,
     diversidad natural y una historia fascinante. Su topografía varía desde
     llanuras hasta cordilleras y alberga una gran cantidad de biodiversidad.
 </p>
+<!-- Párrafo informativo sobre Colombia -->
 
  </div>
 
 </section>
 
+<!-- SECCIÓN DEDICADA A LOS SÍMBOLOS PATRIOS -->
 <section class="simbolos">
 
     <h2>Símbolos Patrios</h2>
+    <!-- Título de la sección -->
 
     <div class="linea-simbolos"></div>
+    <!-- Línea decorativa dorada -->
 
     <div class="texto-simbolos">
+    <!-- Contenedor del texto de los símbolos patrios -->
 
         <p>
             parrafo indefinido
         </p>
+        <!-- Párrafo descriptivo -->
 
     </div>
 </section>
 
+<!-- TARJETA PRINCIPAL DONDE SE MUESTRAN LAS OBRAS -->
 <div class="tarjeta-simbolo">
 
     <h3>Obras</h3>
+    <!-- Título de la tarjeta -->
 
+    <!-- CARRUSEL DE IMÁGENES -->
     <div class="carrusel"> 
+
         <button onclick="anterior()"></button>
+        <!-- Botón que ejecuta la función para mostrar la imagen anterior -->
+
         <img id="imagen" src="bandera.jfif" alt="sinbolos patrios">
+        <!-- Imagen que cambia mediante JavaScript -->
+
         <button onclick="sigiente()"></button>
+        <!-- Botón que ejecuta la función para mostrar la siguiente imagen -->
+
     </div>
 
     <p id="texto-imagen">
     La bandera de Colombia representa la historia y la identidad del país.
     Está formada por los colores amarillo, azul y rojo.
    </p>
+   <!-- Texto que cambia junto con las imágenes del carrusel -->
 
 </div>
 
 
+<!-- JAVASCRIPT: CONTROLA EL FUNCIONAMIENTO DEL CARRUSEL -->
 <script>
+
+    // ARRAY QUE ALMACENA LOS NOMBRES DE LAS IMÁGENES
     let imagenes = [
         "imagen1 (2).jpeg",
         "imagen2.jpeg",
         "imagen3.jpeg",
         "imagen4.jpeg",
         "imagen5.jpeg",
-        "imagen6.jpeg"
+        "imagen6.jpeg",
+        "imagen7.jpeg",
+        "imagen8.jpeg",
+        "imagen9.jpeg",
+        "imagen10.jpeg",
+        "imagen13.jpeg",
+        "imagen12.jpeg"
     ];
 
+    // VARIABLE QUE GUARDA LA POSICIÓN DE LA IMAGEN ACTUAL
+    // Comienza en 0 porque los arrays empiezan a contar desde cero
     let posicion = 0;
 
+    // ARRAY QUE ALMACENA LOS TEXTOS DE CADA OBRA
+    // Cada texto corresponde a una imagen según su posición
     let textos = [
     "La maleta de una mujer Cristian Yaima, Estefanny Tique y Erick Mendoza.Obra que representa el desplazamiento forzado de mujeres durante el conflicto armado colombiano.Sus objetos simbolizan la memoria, las costumbres, la familia y las pérdidas.La planta representa la esperanza de reconstruir una vida en otro lugar.Invita a reflexionar sobre el hogar, la resistencia y el sentido de pertenencia.",
 
@@ -99,40 +163,75 @@
 
     "La fractura que no se notó (Escultura) Julian MoralesMuchas veces no todos recordamos o apreciamos el inicio de una fractura desde el comienzo de una nacion.",
 
-    "nadanadaUna historia reconstruida en un muñecoYeison Benitez y Riqui MalamboEsta obra está compuesta por dos piezas por parte de una víctima del conflicto armado.Ella fue reclutada cuando tenía apenas 12 años.Fue un camino muy difícil para rehacer su vida.Las heridas que tiene el muñeco representan el daño que le ocasiono las FARC a la víctima.El hilo representara la esperanza que ella tenía para volver a tener una vida mejor.Hoy en día ella está conformando una asociación para trabajar con desvinculados del conflicto armado.La idea de construir un mejor país."
+    "nadanadaUna historia reconstruida en un muñecoYeison Benitez y Riqui MalamboEsta obra está compuesta por dos piezas por parte de una víctima del conflicto armado.Ella fue reclutada cuando tenía apenas 12 años.Fue un camino muy difícil para rehacer su vida.Las heridas que tiene el muñeco representan el daño que le ocasiono las FARC a la víctima.El hilo representara la esperanza que ella tenía para volver a tener una vida mejor.Hoy en día ella está conformando una asociación para trabajar con desvinculados del conflicto armado.La idea de construir un mejor país.",
+
+    "La obra “Voces que permanecen” representa un árbol que conserva las historias de personas afectadas por la violencia. Sus ramas simbolizan los recuerdos y sus heridas reflejan el dolor y el paso del tiempo. El corazón representa la unión de esas memorias. Su mensaje es que recordar también es resistir, porque ninguna historia desaparece mientras alguien la mantenga viva.",
+
+    "La obra “El viejito tejido” representa la historia de Chucho Pérez, un campesino que sufrió el desplazamiento y luchó por la tierra en Colombia. La maleta simboliza el abandono de los hogares debido a la violencia. También refleja la tristeza, valentía y esperanza de quienes tuvieron que dejar sus tierras, pero siguieron luchando por sus derechos y su futuro.",
+
+    "La obra “Huellas que aún caminan” representa la memoria de los hijos de las Madres de Soacha, víctimas de los falsos positivos. La bota simboliza sus pasos e historias, mientras que las fotografías recuerdan sus rostros y familias. Su mensaje es que, aunque sus vidas fueron interrumpidas, su memoria, dignidad y legado permanecen vivos.",
+
+    "La obra “La paz que florece” y “Flores marchitas” representa la violencia y la resistencia campesina en San José de Apartadó. La mano encadenada simboliza la opresión, mientras que la flor representa la esperanza y el recuerdo de las víctimas. Las fotografías y los hilos rojos representan las vidas perdidas y los vínculos que permanecen. Ambas obras transmiten un mensaje de memoria, resistencia y construcción de paz.",
+
+    "La obra “Hasta encontrar la verdad” representa la búsqueda de las Madres de Soacha por conocer qué ocurrió con sus hijos. El laberinto simboliza el difícil camino hacia la verdad, mientras que el corazón fragmentado representa el dolor, la ausencia y la incertidumbre. Su mensaje es que, aunque se encuentre la verdad, el sufrimiento y las heridas permanecen en la memoria.",
+
+    "La obra “Memoria Suspendida” representa la reparación después del conflicto armado en Dabeiba, Antioquia. El corazón simboliza las heridas y recuerdos de las víctimas, mientras que la lana representa la unión con el territorio y la comunidad. Las mariposas simbolizan la transformación, la reparación y la esperanza de construir un futuro diferente sin olvidar el pasado.",
+
+    ""
 ];
 
+    // FUNCIÓN PARA AVANZAR A LA SIGUIENTE IMAGEN
     function sigiente() {
+
+        // Aumenta la posición en una unidad
         posicion++;
 
+        // COMPRUEBA SI SE LLEGÓ AL FINAL DEL ARRAY
         if (posicion >=
          imagenes.length) {
+
+                 // Si llega al final, vuelve a la primera imagen
                  posicion = 0;
         }
 
+        // CAMBIA LA IMAGEN QUE SE MUESTRA EN HTML
         document.getElementById("imagen").
         src =
                 imagenes[posicion];
 
+        // CAMBIA EL TEXTO SEGÚN LA POSICIÓN ACTUAL
         document.getElementById("texto-imagen").textContent =
         textos[posicion];
     }
 
+    // FUNCIÓN PARA RETROCEDER A LA IMAGEN ANTERIOR
     function anterior() {
+
+    // Disminuye la posición en una unidad
     posicion--;
 
+    // COMPRUEBA SI SE LLEGÓ ANTES DE LA PRIMERA IMAGEN
     if (posicion < 0) {
+
+        // Si ocurre, pasa a la última imagen
         posicion = imagenes.length - 1;
     }
 
+    // ACTUALIZA LA IMAGEN
     document.getElementById("imagen").src =
         imagenes[posicion];
 
+    // ACTUALIZA EL TEXTO CORRESPONDIENTE A ESA IMAGEN
     document.getElementById("texto-imagen").textContent =
         textos[posicion];
 }
+
 </script>
+<!-- Aquí termina el código JavaScript -->
+
 
 </body>
+<!-- Aquí termina el contenido de la página -->
 
 </html>
+<!-- Aquí termina el documento HTML -->
