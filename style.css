@@ -651,3 +651,17 @@ section p {
     line-height: 1.6;
     /* Separación entre líneas */
 }
+/* ==========================================
+   21. EL DE QUE DICE OBRAS
+   ========================================== */
+
+.tarjeta-simbolo h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    background-color: #41403f;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    border-bottom: 4px solid #b59a6a;
+}
