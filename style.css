@@ -447,10 +447,10 @@ section p {
     height: 35px;
     /* Alto del botón */
 
-    background-color: #8B4513;
+    background-color: #353434;
     /* Fondo café */
 
-    color: white;
+    color: rgb(133, 21, 21);
     /* Color blanco para la flecha */
 
     border: none;
@@ -478,7 +478,7 @@ section p {
 /* EFECTO AL PASAR EL CURSOR SOBRE LOS BOTONES */
 
 .carrusel button:hover {
-    background-color: #6d3812;
+    background-color: #080808;
     /* Oscurece el fondo del botón */
 }
 
