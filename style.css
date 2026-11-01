@@ -10,7 +10,7 @@ body {
     margin: 0;
     /* Elimina el margen exterior predeterminado del navegador */
 
-    background-color: #61605c;
+    background-color: #424242;
     /* Establece el color de fondo de la página */
 
     ;
@@ -24,7 +24,7 @@ h1 {
     text-align: center;
     /* Centra el título */
 
-    color: white;
+    color: rgb(247, 242, 242);
     /* Cambia el color del texto a blanco */
 
     font-size: 42px;
@@ -162,10 +162,10 @@ section {
    ========================================== */
 
 header {
-    background-color: #f8f8f8;
+    background-color: #fcfcfc;
     /* Establece el fondo del encabezado */
 
-    color: rgb(12, 12, 12);
+    color: rgb(7, 7, 7);
     /* Define el color del texto */
 
     display: flex;
